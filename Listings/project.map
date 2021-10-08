@@ -1,0 +1,1447 @@
+Component: ARM Compiler 6.15 Tool: armlink [5dd79300]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(.text.ConfigureUSBUART0) refers to sysctl.o(i.SysCtlPeripheralEnable) for SysCtlPeripheralEnable
+    main.o(.text.ConfigureUSBUART0) refers to gpio.o(i.GPIOPinConfigure) for GPIOPinConfigure
+    main.o(.text.ConfigureUSBUART0) refers to gpio.o(i.GPIOPinTypeUART) for GPIOPinTypeUART
+    main.o(.text.ConfigureUSBUART0) refers to uart.o(.text.UARTClockSourceSet) for UARTClockSourceSet
+    main.o(.text.ConfigureUSBUART0) refers to uartstdio.o(.text.UARTStdioConfig) for UARTStdioConfig
+    main.o(.ARM.exidx.text.ConfigureUSBUART0) refers to main.o(.text.ConfigureUSBUART0) for [Anonymous Symbol]
+    main.o(.text.printPacket) refers to uartstdio.o(.text.UARTprintf) for UARTprintf
+    main.o(.text.printPacket) refers to uart.o(.text.UARTCharPut) for UARTCharPut
+    main.o(.ARM.exidx.text.printPacket) refers to main.o(.text.printPacket) for [Anonymous Symbol]
+    main.o(.text.main) refers to main.o(.text.ConfigureUSBUART0) for ConfigureUSBUART0
+    main.o(.text.main) refers to uartstdio.o(.text.UARTprintf) for UARTprintf
+    main.o(.text.main) refers to inithw.o(.text.initHw) for initHw
+    main.o(.text.main) refers to enc28j60.o(.text.etherInit) for etherInit
+    main.o(.text.main) refers to enc28j60.o(.text.etherSetIpAddress) for etherSetIpAddress
+    main.o(.text.main) refers to enc28j60.o(.text.etherWritePhy) for etherWritePhy
+    main.o(.text.main) refers to enc28j60.o(.text.etherKbhit) for etherKbhit
+    main.o(.text.main) refers to enc28j60.o(.text.etherIsOverflow) for etherIsOverflow
+    main.o(.text.main) refers to wait.o(.text.waitMicrosecond) for waitMicrosecond
+    main.o(.text.main) refers to enc28j60.o(.text.etherGetPacket) for etherGetPacket
+    main.o(.text.main) refers to main.o(.text.printPacket) for printPacket
+    main.o(.text.main) refers to enc28j60.o(.text.etherIsArp) for etherIsArp
+    main.o(.text.main) refers to enc28j60.o(.text.etherSendArpResp) for etherSendArpResp
+    main.o(.text.main) refers to enc28j60.o(.text.etherIsIp) for etherIsIp
+    main.o(.text.main) refers to enc28j60.o(.text.etherIsIpUnicast) for etherIsIpUnicast
+    main.o(.text.main) refers to enc28j60.o(.text.etherIsPingReq) for etherIsPingReq
+    main.o(.text.main) refers to enc28j60.o(.text.etherSendPingResp) for etherSendPingResp
+    main.o(.text.main) refers to enc28j60.o(.text.etherIsUdp) for etherIsUdp
+    main.o(.text.main) refers to enc28j60.o(.text.etherGetUdpData) for etherGetUdpData
+    main.o(.text.main) refers to enc28j60.o(.text.etherSendUdpData) for etherSendUdpData
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    startup_rvmdk.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_rvmdk.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_rvmdk.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_rvmdk.o(RESET) refers to startup_rvmdk.o(STACK) for StackMem
+    startup_rvmdk.o(RESET) refers to __main.o(!!!main) for __main
+    startup_rvmdk.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_rvmdk.o(.text) refers to startup_rvmdk.o(HEAP) for HeapMem
+    startup_rvmdk.o(.text) refers to startup_rvmdk.o(STACK) for StackMem
+    enc28j60.o(.ARM.exidx.text.spiWrite) refers to enc28j60.o(.text.spiWrite) for [Anonymous Symbol]
+    enc28j60.o(.ARM.exidx.text.spiRead) refers to enc28j60.o(.text.spiRead) for [Anonymous Symbol]
+    enc28j60.o(.ARM.exidx.text.etherCsOn) refers to enc28j60.o(.text.etherCsOn) for [Anonymous Symbol]
+    enc28j60.o(.ARM.exidx.text.etherCsOff) refers to enc28j60.o(.text.etherCsOff) for [Anonymous Symbol]
+    enc28j60.o(.text.etherWriteReg) refers to enc28j60.o(.text.etherCsOn) for etherCsOn
+    enc28j60.o(.text.etherWriteReg) refers to enc28j60.o(.text.spiWrite) for spiWrite
+    enc28j60.o(.text.etherWriteReg) refers to enc28j60.o(.text.spiRead) for spiRead
+    enc28j60.o(.text.etherWriteReg) refers to enc28j60.o(.text.etherCsOff) for etherCsOff
+    enc28j60.o(.ARM.exidx.text.etherWriteReg) refers to enc28j60.o(.text.etherWriteReg) for [Anonymous Symbol]
+    enc28j60.o(.text.etherReadReg) refers to enc28j60.o(.text.etherCsOn) for etherCsOn
+    enc28j60.o(.text.etherReadReg) refers to enc28j60.o(.text.spiWrite) for spiWrite
+    enc28j60.o(.text.etherReadReg) refers to enc28j60.o(.text.spiRead) for spiRead
+    enc28j60.o(.text.etherReadReg) refers to enc28j60.o(.text.etherCsOff) for etherCsOff
+    enc28j60.o(.ARM.exidx.text.etherReadReg) refers to enc28j60.o(.text.etherReadReg) for [Anonymous Symbol]
+    enc28j60.o(.text.etherSetReg) refers to enc28j60.o(.text.etherCsOn) for etherCsOn
+    enc28j60.o(.text.etherSetReg) refers to enc28j60.o(.text.spiWrite) for spiWrite
+    enc28j60.o(.text.etherSetReg) refers to enc28j60.o(.text.spiRead) for spiRead
+    enc28j60.o(.text.etherSetReg) refers to enc28j60.o(.text.etherCsOff) for etherCsOff
+    enc28j60.o(.ARM.exidx.text.etherSetReg) refers to enc28j60.o(.text.etherSetReg) for [Anonymous Symbol]
+    enc28j60.o(.text.etherClearReg) refers to enc28j60.o(.text.etherCsOn) for etherCsOn
+    enc28j60.o(.text.etherClearReg) refers to enc28j60.o(.text.spiWrite) for spiWrite
+    enc28j60.o(.text.etherClearReg) refers to enc28j60.o(.text.spiRead) for spiRead
+    enc28j60.o(.text.etherClearReg) refers to enc28j60.o(.text.etherCsOff) for etherCsOff
+    enc28j60.o(.ARM.exidx.text.etherClearReg) refers to enc28j60.o(.text.etherClearReg) for [Anonymous Symbol]
+    enc28j60.o(.text.etherSetBank) refers to enc28j60.o(.text.etherClearReg) for etherClearReg
+    enc28j60.o(.text.etherSetBank) refers to enc28j60.o(.text.etherSetReg) for etherSetReg
+    enc28j60.o(.ARM.exidx.text.etherSetBank) refers to enc28j60.o(.text.etherSetBank) for [Anonymous Symbol]
+    enc28j60.o(.text.etherWritePhy) refers to enc28j60.o(.text.etherSetBank) for etherSetBank
+    enc28j60.o(.text.etherWritePhy) refers to enc28j60.o(.text.etherWriteReg) for etherWriteReg
+    enc28j60.o(.ARM.exidx.text.etherWritePhy) refers to enc28j60.o(.text.etherWritePhy) for [Anonymous Symbol]
+    enc28j60.o(.text.etherReadPhy) refers to enc28j60.o(.text.etherSetBank) for etherSetBank
+    enc28j60.o(.text.etherReadPhy) refers to enc28j60.o(.text.etherWriteReg) for etherWriteReg
+    enc28j60.o(.text.etherReadPhy) refers to enc28j60.o(.text.etherReadReg) for etherReadReg
+    enc28j60.o(.text.etherReadPhy) refers to wait.o(.text.waitMicrosecond) for waitMicrosecond
+    enc28j60.o(.ARM.exidx.text.etherReadPhy) refers to enc28j60.o(.text.etherReadPhy) for [Anonymous Symbol]
+    enc28j60.o(.text.etherWriteMemStart) refers to enc28j60.o(.text.etherCsOn) for etherCsOn
+    enc28j60.o(.text.etherWriteMemStart) refers to enc28j60.o(.text.spiWrite) for spiWrite
+    enc28j60.o(.text.etherWriteMemStart) refers to enc28j60.o(.text.spiRead) for spiRead
+    enc28j60.o(.ARM.exidx.text.etherWriteMemStart) refers to enc28j60.o(.text.etherWriteMemStart) for [Anonymous Symbol]
+    enc28j60.o(.text.etherWriteMem) refers to enc28j60.o(.text.spiWrite) for spiWrite
+    enc28j60.o(.text.etherWriteMem) refers to enc28j60.o(.text.spiRead) for spiRead
+    enc28j60.o(.ARM.exidx.text.etherWriteMem) refers to enc28j60.o(.text.etherWriteMem) for [Anonymous Symbol]
+    enc28j60.o(.text.etherWriteMemStop) refers to enc28j60.o(.text.etherCsOff) for etherCsOff
+    enc28j60.o(.ARM.exidx.text.etherWriteMemStop) refers to enc28j60.o(.text.etherWriteMemStop) for [Anonymous Symbol]
+    enc28j60.o(.text.etherReadMemStart) refers to enc28j60.o(.text.etherCsOn) for etherCsOn
+    enc28j60.o(.text.etherReadMemStart) refers to enc28j60.o(.text.spiWrite) for spiWrite
+    enc28j60.o(.text.etherReadMemStart) refers to enc28j60.o(.text.spiRead) for spiRead
+    enc28j60.o(.ARM.exidx.text.etherReadMemStart) refers to enc28j60.o(.text.etherReadMemStart) for [Anonymous Symbol]
+    enc28j60.o(.text.etherReadMem) refers to enc28j60.o(.text.spiWrite) for spiWrite
+    enc28j60.o(.text.etherReadMem) refers to enc28j60.o(.text.spiRead) for spiRead
+    enc28j60.o(.ARM.exidx.text.etherReadMem) refers to enc28j60.o(.text.etherReadMem) for [Anonymous Symbol]
+    enc28j60.o(.text.etherReadMemStop) refers to enc28j60.o(.text.etherCsOff) for etherCsOff
+    enc28j60.o(.ARM.exidx.text.etherReadMemStop) refers to enc28j60.o(.text.etherReadMemStop) for [Anonymous Symbol]
+    enc28j60.o(.text.etherInit) refers to enc28j60.o(.text.etherReadReg) for etherReadReg
+    enc28j60.o(.text.etherInit) refers to enc28j60.o(.text.etherClearReg) for etherClearReg
+    enc28j60.o(.text.etherInit) refers to enc28j60.o(.text.etherSetBank) for etherSetBank
+    enc28j60.o(.text.etherInit) refers to enc28j60.o(.text.etherWriteReg) for etherWriteReg
+    enc28j60.o(.text.etherInit) refers to enc28j60.o(.data.macAddress) for macAddress
+    enc28j60.o(.text.etherInit) refers to enc28j60.o(.text.etherWritePhy) for etherWritePhy
+    enc28j60.o(.text.etherInit) refers to enc28j60.o(.text.etherSetReg) for etherSetReg
+    enc28j60.o(.ARM.exidx.text.etherInit) refers to enc28j60.o(.text.etherInit) for [Anonymous Symbol]
+    enc28j60.o(.text.etherKbhit) refers to enc28j60.o(.text.etherReadReg) for etherReadReg
+    enc28j60.o(.ARM.exidx.text.etherKbhit) refers to enc28j60.o(.text.etherKbhit) for [Anonymous Symbol]
+    enc28j60.o(.text.etherGetPacket) refers to enc28j60.o(.text.etherReadMemStart) for etherReadMemStart
+    enc28j60.o(.text.etherGetPacket) refers to enc28j60.o(.text.etherReadMem) for etherReadMem
+    enc28j60.o(.text.etherGetPacket) refers to enc28j60.o(.bss.nextPacketLsb) for nextPacketLsb
+    enc28j60.o(.text.etherGetPacket) refers to enc28j60.o(.bss.nextPacketMsb) for nextPacketMsb
+    enc28j60.o(.text.etherGetPacket) refers to enc28j60.o(.text.etherReadMemStop) for etherReadMemStop
+    enc28j60.o(.text.etherGetPacket) refers to enc28j60.o(.text.etherSetBank) for etherSetBank
+    enc28j60.o(.text.etherGetPacket) refers to enc28j60.o(.text.etherWriteReg) for etherWriteReg
+    enc28j60.o(.text.etherGetPacket) refers to enc28j60.o(.text.etherSetReg) for etherSetReg
+    enc28j60.o(.ARM.exidx.text.etherGetPacket) refers to enc28j60.o(.text.etherGetPacket) for [Anonymous Symbol]
+    enc28j60.o(.text.etherIsOverflow) refers to enc28j60.o(.text.etherReadReg) for etherReadReg
+    enc28j60.o(.text.etherIsOverflow) refers to enc28j60.o(.text.etherClearReg) for etherClearReg
+    enc28j60.o(.ARM.exidx.text.etherIsOverflow) refers to enc28j60.o(.text.etherIsOverflow) for [Anonymous Symbol]
+    enc28j60.o(.text.etherPutPacket) refers to enc28j60.o(.text.etherReadReg) for etherReadReg
+    enc28j60.o(.text.etherPutPacket) refers to enc28j60.o(.text.etherClearReg) for etherClearReg
+    enc28j60.o(.text.etherPutPacket) refers to enc28j60.o(.text.etherSetReg) for etherSetReg
+    enc28j60.o(.text.etherPutPacket) refers to enc28j60.o(.text.etherSetBank) for etherSetBank
+    enc28j60.o(.text.etherPutPacket) refers to enc28j60.o(.text.etherWriteReg) for etherWriteReg
+    enc28j60.o(.text.etherPutPacket) refers to enc28j60.o(.text.etherWriteMemStart) for etherWriteMemStart
+    enc28j60.o(.text.etherPutPacket) refers to enc28j60.o(.text.etherWriteMem) for etherWriteMem
+    enc28j60.o(.text.etherPutPacket) refers to enc28j60.o(.text.etherWriteMemStop) for etherWriteMemStop
+    enc28j60.o(.ARM.exidx.text.etherPutPacket) refers to enc28j60.o(.text.etherPutPacket) for [Anonymous Symbol]
+    enc28j60.o(.text.etherSumWords) refers to enc28j60.o(.bss.sum) for sum
+    enc28j60.o(.ARM.exidx.text.etherSumWords) refers to enc28j60.o(.text.etherSumWords) for [Anonymous Symbol]
+    enc28j60.o(.text.getEtherChecksum) refers to enc28j60.o(.bss.sum) for sum
+    enc28j60.o(.ARM.exidx.text.getEtherChecksum) refers to enc28j60.o(.text.getEtherChecksum) for [Anonymous Symbol]
+    enc28j60.o(.ARM.exidx.text.htons) refers to enc28j60.o(.text.htons) for [Anonymous Symbol]
+    enc28j60.o(.text.etherIsIp) refers to enc28j60.o(.bss.enc28j60) for enc28j60
+    enc28j60.o(.text.etherIsIp) refers to enc28j60.o(.bss.ether) for ether
+    enc28j60.o(.text.etherIsIp) refers to enc28j60.o(.bss.ip) for ip
+    enc28j60.o(.text.etherIsIp) refers to enc28j60.o(.bss.sum) for sum
+    enc28j60.o(.text.etherIsIp) refers to enc28j60.o(.text.etherSumWords) for etherSumWords
+    enc28j60.o(.text.etherIsIp) refers to enc28j60.o(.text.getEtherChecksum) for getEtherChecksum
+    enc28j60.o(.ARM.exidx.text.etherIsIp) refers to enc28j60.o(.text.etherIsIp) for [Anonymous Symbol]
+    enc28j60.o(.text.etherIsIpUnicast) refers to enc28j60.o(.bss.enc28j60) for enc28j60
+    enc28j60.o(.text.etherIsIpUnicast) refers to enc28j60.o(.bss.ether) for ether
+    enc28j60.o(.text.etherIsIpUnicast) refers to enc28j60.o(.bss.ip) for ip
+    enc28j60.o(.text.etherIsIpUnicast) refers to enc28j60.o(.bss.ipv4Address) for ipv4Address
+    enc28j60.o(.ARM.exidx.text.etherIsIpUnicast) refers to enc28j60.o(.text.etherIsIpUnicast) for [Anonymous Symbol]
+    enc28j60.o(.text.etherIsPingReq) refers to enc28j60.o(.bss.enc28j60) for enc28j60
+    enc28j60.o(.text.etherIsPingReq) refers to enc28j60.o(.bss.ether) for ether
+    enc28j60.o(.text.etherIsPingReq) refers to enc28j60.o(.bss.ip) for ip
+    enc28j60.o(.text.etherIsPingReq) refers to enc28j60.o(.bss.icmp) for icmp
+    enc28j60.o(.ARM.exidx.text.etherIsPingReq) refers to enc28j60.o(.text.etherIsPingReq) for [Anonymous Symbol]
+    enc28j60.o(.text.etherSendPingResp) refers to enc28j60.o(.bss.enc28j60) for enc28j60
+    enc28j60.o(.text.etherSendPingResp) refers to enc28j60.o(.bss.ether) for ether
+    enc28j60.o(.text.etherSendPingResp) refers to enc28j60.o(.bss.ip) for ip
+    enc28j60.o(.text.etherSendPingResp) refers to enc28j60.o(.bss.icmp) for icmp
+    enc28j60.o(.text.etherSendPingResp) refers to enc28j60.o(.bss.sum) for sum
+    enc28j60.o(.text.etherSendPingResp) refers to enc28j60.o(.text.etherSumWords) for etherSumWords
+    enc28j60.o(.text.etherSendPingResp) refers to enc28j60.o(.text.htons) for htons
+    enc28j60.o(.text.etherSendPingResp) refers to enc28j60.o(.text.getEtherChecksum) for getEtherChecksum
+    enc28j60.o(.text.etherSendPingResp) refers to enc28j60.o(.text.etherPutPacket) for etherPutPacket
+    enc28j60.o(.ARM.exidx.text.etherSendPingResp) refers to enc28j60.o(.text.etherSendPingResp) for [Anonymous Symbol]
+    enc28j60.o(.text.etherIsArp) refers to enc28j60.o(.bss.enc28j60) for enc28j60
+    enc28j60.o(.text.etherIsArp) refers to enc28j60.o(.bss.ether) for ether
+    enc28j60.o(.text.etherIsArp) refers to enc28j60.o(.bss.arp) for arp
+    enc28j60.o(.text.etherIsArp) refers to enc28j60.o(.bss.ipv4Address) for ipv4Address
+    enc28j60.o(.ARM.exidx.text.etherIsArp) refers to enc28j60.o(.text.etherIsArp) for [Anonymous Symbol]
+    enc28j60.o(.text.etherSendArpResp) refers to enc28j60.o(.bss.arp) for arp
+    enc28j60.o(.text.etherSendArpResp) refers to enc28j60.o(.bss.enc28j60) for enc28j60
+    enc28j60.o(.text.etherSendArpResp) refers to enc28j60.o(.bss.ether) for ether
+    enc28j60.o(.text.etherSendArpResp) refers to enc28j60.o(.data.macAddress) for macAddress
+    enc28j60.o(.text.etherSendArpResp) refers to enc28j60.o(.text.etherPutPacket) for etherPutPacket
+    enc28j60.o(.ARM.exidx.text.etherSendArpResp) refers to enc28j60.o(.text.etherSendArpResp) for [Anonymous Symbol]
+    enc28j60.o(.text.etherSendArpReq) refers to enc28j60.o(.bss.arp) for arp
+    enc28j60.o(.text.etherSendArpReq) refers to enc28j60.o(.bss.ether) for ether
+    enc28j60.o(.text.etherSendArpReq) refers to enc28j60.o(.data.macAddress) for macAddress
+    enc28j60.o(.text.etherSendArpReq) refers to enc28j60.o(.bss.ipv4Address) for ipv4Address
+    enc28j60.o(.text.etherSendArpReq) refers to enc28j60.o(.text.etherPutPacket) for etherPutPacket
+    enc28j60.o(.ARM.exidx.text.etherSendArpReq) refers to enc28j60.o(.text.etherSendArpReq) for [Anonymous Symbol]
+    enc28j60.o(.text.etherIsUdp) refers to enc28j60.o(.bss.enc28j60) for enc28j60
+    enc28j60.o(.text.etherIsUdp) refers to enc28j60.o(.bss.ether) for ether
+    enc28j60.o(.text.etherIsUdp) refers to enc28j60.o(.bss.udp) for udp
+    enc28j60.o(.text.etherIsUdp) refers to enc28j60.o(.bss.ip) for ip
+    enc28j60.o(.text.etherIsUdp) refers to enc28j60.o(.bss.sum) for sum
+    enc28j60.o(.text.etherIsUdp) refers to enc28j60.o(.text.etherSumWords) for etherSumWords
+    enc28j60.o(.text.etherIsUdp) refers to enc28j60.o(.text.htons) for htons
+    enc28j60.o(.text.etherIsUdp) refers to enc28j60.o(.text.getEtherChecksum) for getEtherChecksum
+    enc28j60.o(.ARM.exidx.text.etherIsUdp) refers to enc28j60.o(.text.etherIsUdp) for [Anonymous Symbol]
+    enc28j60.o(.text.etherGetUdpData) refers to enc28j60.o(.bss.enc28j60) for enc28j60
+    enc28j60.o(.text.etherGetUdpData) refers to enc28j60.o(.bss.ether) for ether
+    enc28j60.o(.text.etherGetUdpData) refers to enc28j60.o(.bss.ip) for ip
+    enc28j60.o(.text.etherGetUdpData) refers to enc28j60.o(.bss.udp) for udp
+    enc28j60.o(.ARM.exidx.text.etherGetUdpData) refers to enc28j60.o(.text.etherGetUdpData) for [Anonymous Symbol]
+    enc28j60.o(.text.etherCalcIpChecksum) refers to enc28j60.o(.bss.ip) for ip
+    enc28j60.o(.text.etherCalcIpChecksum) refers to enc28j60.o(.bss.sum) for sum
+    enc28j60.o(.text.etherCalcIpChecksum) refers to enc28j60.o(.text.etherSumWords) for etherSumWords
+    enc28j60.o(.text.etherCalcIpChecksum) refers to enc28j60.o(.text.getEtherChecksum) for getEtherChecksum
+    enc28j60.o(.ARM.exidx.text.etherCalcIpChecksum) refers to enc28j60.o(.text.etherCalcIpChecksum) for [Anonymous Symbol]
+    enc28j60.o(.text.etherSendUdpData) refers to enc28j60.o(.bss.enc28j60) for enc28j60
+    enc28j60.o(.text.etherSendUdpData) refers to enc28j60.o(.bss.ether) for ether
+    enc28j60.o(.text.etherSendUdpData) refers to enc28j60.o(.bss.ip) for ip
+    enc28j60.o(.text.etherSendUdpData) refers to enc28j60.o(.bss.udp) for udp
+    enc28j60.o(.text.etherSendUdpData) refers to enc28j60.o(.text.htons) for htons
+    enc28j60.o(.text.etherSendUdpData) refers to enc28j60.o(.bss.sum) for sum
+    enc28j60.o(.text.etherSendUdpData) refers to enc28j60.o(.text.etherSumWords) for etherSumWords
+    enc28j60.o(.text.etherSendUdpData) refers to enc28j60.o(.text.getEtherChecksum) for getEtherChecksum
+    enc28j60.o(.text.etherSendUdpData) refers to enc28j60.o(.text.etherPutPacket) for etherPutPacket
+    enc28j60.o(.ARM.exidx.text.etherSendUdpData) refers to enc28j60.o(.text.etherSendUdpData) for [Anonymous Symbol]
+    enc28j60.o(.text.etherGetId) refers to enc28j60.o(.data.sequenceId) for sequenceId
+    enc28j60.o(.text.etherGetId) refers to enc28j60.o(.text.htons) for htons
+    enc28j60.o(.ARM.exidx.text.etherGetId) refers to enc28j60.o(.text.etherGetId) for [Anonymous Symbol]
+    enc28j60.o(.text.etherIncId) refers to enc28j60.o(.data.sequenceId) for sequenceId
+    enc28j60.o(.ARM.exidx.text.etherIncId) refers to enc28j60.o(.text.etherIncId) for [Anonymous Symbol]
+    enc28j60.o(.text.etherIsValidIp) refers to enc28j60.o(.bss.ipv4Address) for ipv4Address
+    enc28j60.o(.ARM.exidx.text.etherIsValidIp) refers to enc28j60.o(.text.etherIsValidIp) for [Anonymous Symbol]
+    enc28j60.o(.text.etherSetIpAddress) refers to enc28j60.o(.bss.ipv4Address) for ipv4Address
+    enc28j60.o(.ARM.exidx.text.etherSetIpAddress) refers to enc28j60.o(.text.etherSetIpAddress) for [Anonymous Symbol]
+    inithw.o(.ARM.exidx.text.initHw) refers to inithw.o(.text.initHw) for [Anonymous Symbol]
+    wait.o(.ARM.exidx.text.waitMicrosecond) refers to wait.o(.text.waitMicrosecond) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTParityModeSet) refers to uart.o(.text.UARTParityModeSet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTParityModeGet) refers to uart.o(.text.UARTParityModeGet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTFIFOLevelSet) refers to uart.o(.text.UARTFIFOLevelSet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTFIFOLevelGet) refers to uart.o(.text.UARTFIFOLevelGet) for [Anonymous Symbol]
+    uart.o(.text.UARTConfigSetExpClk) refers to uart.o(.text.UARTDisable) for UARTDisable
+    uart.o(.text.UARTConfigSetExpClk) refers to uart.o(.text.UARTEnable) for UARTEnable
+    uart.o(.ARM.exidx.text.UARTConfigSetExpClk) refers to uart.o(.text.UARTConfigSetExpClk) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTDisable) refers to uart.o(.text.UARTDisable) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTEnable) refers to uart.o(.text.UARTEnable) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTConfigGetExpClk) refers to uart.o(.text.UARTConfigGetExpClk) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTFIFOEnable) refers to uart.o(.text.UARTFIFOEnable) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTFIFODisable) refers to uart.o(.text.UARTFIFODisable) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTEnableSIR) refers to uart.o(.text.UARTEnableSIR) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTDisableSIR) refers to uart.o(.text.UARTDisableSIR) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTSmartCardEnable) refers to uart.o(.text.UARTSmartCardEnable) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTSmartCardDisable) refers to uart.o(.text.UARTSmartCardDisable) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTModemControlSet) refers to uart.o(.text.UARTModemControlSet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTModemControlClear) refers to uart.o(.text.UARTModemControlClear) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTModemControlGet) refers to uart.o(.text.UARTModemControlGet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTModemStatusGet) refers to uart.o(.text.UARTModemStatusGet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTFlowControlSet) refers to uart.o(.text.UARTFlowControlSet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTFlowControlGet) refers to uart.o(.text.UARTFlowControlGet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTTxIntModeSet) refers to uart.o(.text.UARTTxIntModeSet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTTxIntModeGet) refers to uart.o(.text.UARTTxIntModeGet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTCharsAvail) refers to uart.o(.text.UARTCharsAvail) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTSpaceAvail) refers to uart.o(.text.UARTSpaceAvail) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTCharGetNonBlocking) refers to uart.o(.text.UARTCharGetNonBlocking) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTCharGet) refers to uart.o(.text.UARTCharGet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTCharPutNonBlocking) refers to uart.o(.text.UARTCharPutNonBlocking) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTCharPut) refers to uart.o(.text.UARTCharPut) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTBreakCtl) refers to uart.o(.text.UARTBreakCtl) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTBusy) refers to uart.o(.text.UARTBusy) for [Anonymous Symbol]
+    uart.o(.text.UARTIntRegister) refers to uart.o(.text._UARTIntNumberGet) for _UARTIntNumberGet
+    uart.o(.text.UARTIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    uart.o(.text.UARTIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    uart.o(.ARM.exidx.text.UARTIntRegister) refers to uart.o(.text.UARTIntRegister) for [Anonymous Symbol]
+    uart.o(.text._UARTIntNumberGet) refers to uart.o(.rodata.g_ppui32UARTIntMap) for g_ppui32UARTIntMap
+    uart.o(.text._UARTIntNumberGet) refers to uart.o(.rodata.g_ppui32UARTIntMapSnowflake) for g_ppui32UARTIntMapSnowflake
+    uart.o(.ARM.exidx.text._UARTIntNumberGet) refers to uart.o(.text._UARTIntNumberGet) for [Anonymous Symbol]
+    uart.o(.text.UARTIntUnregister) refers to uart.o(.text._UARTIntNumberGet) for _UARTIntNumberGet
+    uart.o(.text.UARTIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    uart.o(.text.UARTIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    uart.o(.ARM.exidx.text.UARTIntUnregister) refers to uart.o(.text.UARTIntUnregister) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTIntEnable) refers to uart.o(.text.UARTIntEnable) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTIntDisable) refers to uart.o(.text.UARTIntDisable) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTIntStatus) refers to uart.o(.text.UARTIntStatus) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTIntClear) refers to uart.o(.text.UARTIntClear) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTDMAEnable) refers to uart.o(.text.UARTDMAEnable) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTDMADisable) refers to uart.o(.text.UARTDMADisable) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTRxErrorGet) refers to uart.o(.text.UARTRxErrorGet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTRxErrorClear) refers to uart.o(.text.UARTRxErrorClear) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTClockSourceSet) refers to uart.o(.text.UARTClockSourceSet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTClockSourceGet) refers to uart.o(.text.UARTClockSourceGet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART9BitEnable) refers to uart.o(.text.UART9BitEnable) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART9BitDisable) refers to uart.o(.text.UART9BitDisable) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART9BitAddrSet) refers to uart.o(.text.UART9BitAddrSet) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UART9BitAddrSend) refers to uart.o(.text.UART9BitAddrSend) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.UARTLoopbackEnable) refers to uart.o(.text.UARTLoopbackEnable) for [Anonymous Symbol]
+    uartstdio.o(.text.UARTStdioConfig) refers to sysctl.o(i.SysCtlPeripheralPresent) for SysCtlPeripheralPresent
+    uartstdio.o(.text.UARTStdioConfig) refers to uartstdio.o(.bss.g_ui32Base) for g_ui32Base
+    uartstdio.o(.text.UARTStdioConfig) refers to sysctl.o(i.SysCtlPeripheralEnable) for SysCtlPeripheralEnable
+    uartstdio.o(.text.UARTStdioConfig) refers to uart.o(.text.UARTConfigSetExpClk) for UARTConfigSetExpClk
+    uartstdio.o(.text.UARTStdioConfig) refers to uart.o(.text.UARTEnable) for UARTEnable
+    uartstdio.o(.ARM.exidx.text.UARTStdioConfig) refers to uartstdio.o(.text.UARTStdioConfig) for [Anonymous Symbol]
+    uartstdio.o(.text.UARTwrite) refers to uartstdio.o(.bss.g_ui32Base) for g_ui32Base
+    uartstdio.o(.text.UARTwrite) refers to uart.o(.text.UARTCharPut) for UARTCharPut
+    uartstdio.o(.ARM.exidx.text.UARTwrite) refers to uartstdio.o(.text.UARTwrite) for [Anonymous Symbol]
+    uartstdio.o(.text.UARTgets) refers to uartstdio.o(.bss.g_ui32Base) for g_ui32Base
+    uartstdio.o(.text.UARTgets) refers to uartstdio.o(.bss.UARTgets.bLastWasCR) for UARTgets.bLastWasCR
+    uartstdio.o(.text.UARTgets) refers to uart.o(.text.UARTCharGet) for UARTCharGet
+    uartstdio.o(.text.UARTgets) refers to uart.o(.text.UARTCharPut) for UARTCharPut
+    uartstdio.o(.text.UARTgets) refers to uartstdio.o(.text.UARTwrite) for UARTwrite
+    uartstdio.o(.ARM.exidx.text.UARTgets) refers to uartstdio.o(.text.UARTgets) for [Anonymous Symbol]
+    uartstdio.o(.text.UARTgetc) refers to uartstdio.o(.bss.g_ui32Base) for g_ui32Base
+    uartstdio.o(.text.UARTgetc) refers to uart.o(.text.UARTCharGet) for UARTCharGet
+    uartstdio.o(.ARM.exidx.text.UARTgetc) refers to uartstdio.o(.text.UARTgetc) for [Anonymous Symbol]
+    uartstdio.o(.text.UARTvprintf) refers to uartstdio.o(.text.UARTwrite) for UARTwrite
+    uartstdio.o(.text.UARTvprintf) refers to aeabi_memset.o(.text) for __aeabi_memset
+    uartstdio.o(.ARM.exidx.text.UARTvprintf) refers to uartstdio.o(.text.UARTvprintf) for [Anonymous Symbol]
+    uartstdio.o(.text.UARTprintf) refers to uartstdio.o(.text.UARTvprintf) for UARTvprintf
+    uartstdio.o(.ARM.exidx.text.UARTprintf) refers to uartstdio.o(.text.UARTprintf) for [Anonymous Symbol]
+    gpio.o(i.GPIOIntRegister) refers to gpio.o(i._GPIOIntNumberGet) for _GPIOIntNumberGet
+    gpio.o(i.GPIOIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    gpio.o(i.GPIOIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    gpio.o(i.GPIOIntRegisterPin) refers to gpio.o(i._GPIOIntNumberGet) for _GPIOIntNumberGet
+    gpio.o(i.GPIOIntRegisterPin) refers to interrupt.o(i.IntRegister) for IntRegister
+    gpio.o(i.GPIOIntRegisterPin) refers to interrupt.o(i.IntEnable) for IntEnable
+    gpio.o(i.GPIOIntUnregister) refers to gpio.o(i._GPIOIntNumberGet) for _GPIOIntNumberGet
+    gpio.o(i.GPIOIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    gpio.o(i.GPIOIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    gpio.o(i.GPIOIntUnregisterPin) refers to gpio.o(i._GPIOIntNumberGet) for _GPIOIntNumberGet
+    gpio.o(i.GPIOIntUnregisterPin) refers to interrupt.o(i.IntDisable) for IntDisable
+    gpio.o(i.GPIOIntUnregisterPin) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    gpio.o(i.GPIOPinConfigure) refers to gpio.o(.constdata) for .constdata
+    gpio.o(i.GPIOPinTypeADC) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeADC) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeCAN) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeCAN) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeComparator) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeComparator) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeComparatorOutput) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeComparatorOutput) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeDIVSCLK) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeDIVSCLK) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeEPI) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeEPI) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeEthernetLED) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeEthernetLED) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeEthernetMII) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeEthernetMII) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeGPIOInput) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeGPIOInput) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeGPIOOutput) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeGPIOOutput) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeGPIOOutputOD) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeGPIOOutputOD) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeHibernateRTCCLK) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeHibernateRTCCLK) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeI2C) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeI2C) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeI2CSCL) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeI2CSCL) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeLCD) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeLCD) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeOneWire) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeOneWire) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypePWM) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypePWM) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeQEI) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeQEI) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeSSI) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeSSI) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeTimer) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeTimer) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeTrace) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeTrace) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeUART) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeUART) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeUSBAnalog) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeUSBAnalog) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeUSBDigital) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeUSBDigital) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeWakeHigh) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeWakeHigh) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i.GPIOPinTypeWakeLow) refers to gpio.o(i.GPIODirModeSet) for GPIODirModeSet
+    gpio.o(i.GPIOPinTypeWakeLow) refers to gpio.o(i.GPIOPadConfigSet) for GPIOPadConfigSet
+    gpio.o(i._GPIOIntNumberGet) refers to gpio.o(.constdata) for .constdata
+    interrupt.o(i.IntDisable) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntEnable) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntIsEnabled) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntMasterDisable) refers to cpu.o(.emb_text) for CPUcpsid
+    interrupt.o(i.IntMasterEnable) refers to cpu.o(.emb_text) for CPUcpsie
+    interrupt.o(i.IntPendClear) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPendSet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGroupingGet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityGroupingSet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntPriorityMaskGet) refers to cpu.o(.emb_text) for CPUbasepriGet
+    interrupt.o(i.IntPriorityMaskSet) refers to cpu.o(.emb_text) for CPUbasepriSet
+    interrupt.o(i.IntPrioritySet) refers to interrupt.o(.constdata) for .constdata
+    interrupt.o(i.IntRegister) refers to interrupt.o(vtable) for vtable
+    interrupt.o(i.IntUnregister) refers to interrupt.o(i._IntDefaultHandler) for _IntDefaultHandler
+    interrupt.o(i.IntUnregister) refers to interrupt.o(vtable) for vtable
+    sysctl.o(i.SysCtlClockFreqSet) refers to sysctl.o(.constdata) for .constdata
+    sysctl.o(i.SysCtlClockGet) refers to sysctl.o(.constdata) for .constdata
+    sysctl.o(i.SysCtlClockSet) refers to sysctl.o(.emb_text) for SysCtlDelay
+    sysctl.o(i.SysCtlDeepSleep) refers to cpu.o(.emb_text) for CPUwfi
+    sysctl.o(i.SysCtlIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    sysctl.o(i.SysCtlIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    sysctl.o(i.SysCtlIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    sysctl.o(i.SysCtlIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    sysctl.o(i.SysCtlSleep) refers to cpu.o(.emb_text) for CPUwfi
+    sysctl.o(i.SysCtlVCOGet) refers to sysctl.o(.constdata) for .constdata
+    aeabi_memset.o(.text) refers to rt_memclr.o(.text) for _memset
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    rt_memclr.o(.text) refers to rt_memclr_w.o(.text) for _memset_w
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(.text.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_rvmdk.o(.text) for __user_initial_stackheap
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002C) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000001) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000A) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000011) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000033) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_user_alloc_1
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    libinit2.o(.ARM.Collect$$libinit$$00000001) refers to fpinit.o(x$fpl$fpinit) for _fp_init
+    libinit2.o(.ARM.Collect$$libinit$$00000010) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$0000000F) for .ARM.Collect$$libinit$$0000000F
+    libinit2.o(.ARM.Collect$$libinit$$00000026) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000027) refers to argv_veneer.o(.emb_text) for __ARM_argv_veneer
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    argv_veneer.o(.emb_text) refers to no_argv.o(.text) for __ARM_get_argv
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_exit_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_command_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_wrch_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.ConfigureUSBUART0), (8 bytes).
+    Removing main.o(.ARM.exidx.text.printPacket), (8 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing enc28j60.o(.text), (0 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.spiWrite), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.spiRead), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherCsOn), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherCsOff), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherWriteReg), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherReadReg), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherSetReg), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherClearReg), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherSetBank), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherWritePhy), (8 bytes).
+    Removing enc28j60.o(.text.etherReadPhy), (48 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherReadPhy), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherWriteMemStart), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherWriteMem), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherWriteMemStop), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherReadMemStart), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherReadMem), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherReadMemStop), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherInit), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherKbhit), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherGetPacket), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherIsOverflow), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherPutPacket), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherSumWords), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.getEtherChecksum), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.htons), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherIsIp), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherIsIpUnicast), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherIsPingReq), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherSendPingResp), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherIsArp), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherSendArpResp), (8 bytes).
+    Removing enc28j60.o(.text.etherSendArpReq), (164 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherSendArpReq), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherIsUdp), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherGetUdpData), (8 bytes).
+    Removing enc28j60.o(.text.etherCalcIpChecksum), (60 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherCalcIpChecksum), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherSendUdpData), (8 bytes).
+    Removing enc28j60.o(.text.etherGetId), (18 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherGetId), (8 bytes).
+    Removing enc28j60.o(.text.etherIncId), (16 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherIncId), (8 bytes).
+    Removing enc28j60.o(.text.etherIsValidIp), (28 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherIsValidIp), (8 bytes).
+    Removing enc28j60.o(.ARM.exidx.text.etherSetIpAddress), (8 bytes).
+    Removing enc28j60.o(.data.sequenceId), (1 bytes).
+    Removing inithw.o(.text), (0 bytes).
+    Removing inithw.o(.ARM.exidx.text.initHw), (8 bytes).
+    Removing wait.o(.text), (0 bytes).
+    Removing wait.o(.ARM.exidx.text.waitMicrosecond), (8 bytes).
+    Removing uart.o(.text), (0 bytes).
+    Removing uart.o(.text.UARTParityModeSet), (12 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTParityModeSet), (8 bytes).
+    Removing uart.o(.text.UARTParityModeGet), (8 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTParityModeGet), (8 bytes).
+    Removing uart.o(.text.UARTFIFOLevelSet), (6 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTFIFOLevelSet), (8 bytes).
+    Removing uart.o(.text.UARTFIFOLevelGet), (16 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTFIFOLevelGet), (8 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTConfigSetExpClk), (8 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTDisable), (8 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTEnable), (8 bytes).
+    Removing uart.o(.text.UARTConfigGetExpClk), (46 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTConfigGetExpClk), (8 bytes).
+    Removing uart.o(.text.UARTFIFOEnable), (10 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTFIFOEnable), (8 bytes).
+    Removing uart.o(.text.UARTFIFODisable), (10 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTFIFODisable), (8 bytes).
+    Removing uart.o(.text.UARTEnableSIR), (18 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTEnableSIR), (8 bytes).
+    Removing uart.o(.text.UARTDisableSIR), (10 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTDisableSIR), (8 bytes).
+    Removing uart.o(.text.UARTSmartCardEnable), (22 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTSmartCardEnable), (8 bytes).
+    Removing uart.o(.text.UARTSmartCardDisable), (10 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTSmartCardDisable), (8 bytes).
+    Removing uart.o(.text.UARTModemControlSet), (12 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTModemControlSet), (8 bytes).
+    Removing uart.o(.text.UARTModemControlClear), (16 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTModemControlClear), (8 bytes).
+    Removing uart.o(.text.UARTModemControlGet), (8 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTModemControlGet), (8 bytes).
+    Removing uart.o(.text.UARTModemStatusGet), (10 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTModemStatusGet), (8 bytes).
+    Removing uart.o(.text.UARTFlowControlSet), (12 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTFlowControlSet), (8 bytes).
+    Removing uart.o(.text.UARTFlowControlGet), (8 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTFlowControlGet), (8 bytes).
+    Removing uart.o(.text.UARTTxIntModeSet), (12 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTTxIntModeSet), (8 bytes).
+    Removing uart.o(.text.UARTTxIntModeGet), (8 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTTxIntModeGet), (8 bytes).
+    Removing uart.o(.text.UARTCharsAvail), (14 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTCharsAvail), (8 bytes).
+    Removing uart.o(.text.UARTSpaceAvail), (14 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTSpaceAvail), (8 bytes).
+    Removing uart.o(.text.UARTCharGetNonBlocking), (14 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTCharGetNonBlocking), (8 bytes).
+    Removing uart.o(.text.UARTCharGet), (10 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTCharGet), (8 bytes).
+    Removing uart.o(.text.UARTCharPutNonBlocking), (18 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTCharPutNonBlocking), (8 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTCharPut), (8 bytes).
+    Removing uart.o(.text.UARTBreakCtl), (12 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTBreakCtl), (8 bytes).
+    Removing uart.o(.text.UARTBusy), (8 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTBusy), (8 bytes).
+    Removing uart.o(.text.UARTIntRegister), (24 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTIntRegister), (8 bytes).
+    Removing uart.o(.text._UARTIntNumberGet), (80 bytes).
+    Removing uart.o(.ARM.exidx.text._UARTIntNumberGet), (8 bytes).
+    Removing uart.o(.text.UARTIntUnregister), (20 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTIntUnregister), (8 bytes).
+    Removing uart.o(.text.UARTIntEnable), (8 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTIntEnable), (8 bytes).
+    Removing uart.o(.text.UARTIntDisable), (10 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTIntDisable), (8 bytes).
+    Removing uart.o(.text.UARTIntStatus), (12 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTIntStatus), (8 bytes).
+    Removing uart.o(.text.UARTIntClear), (4 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTIntClear), (8 bytes).
+    Removing uart.o(.text.UARTDMAEnable), (8 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTDMAEnable), (8 bytes).
+    Removing uart.o(.text.UARTDMADisable), (10 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTDMADisable), (8 bytes).
+    Removing uart.o(.text.UARTRxErrorGet), (8 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTRxErrorGet), (8 bytes).
+    Removing uart.o(.text.UARTRxErrorClear), (6 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTRxErrorClear), (8 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTClockSourceSet), (8 bytes).
+    Removing uart.o(.text.UARTClockSourceGet), (6 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTClockSourceGet), (8 bytes).
+    Removing uart.o(.text.UART9BitEnable), (14 bytes).
+    Removing uart.o(.ARM.exidx.text.UART9BitEnable), (8 bytes).
+    Removing uart.o(.text.UART9BitDisable), (14 bytes).
+    Removing uart.o(.ARM.exidx.text.UART9BitDisable), (8 bytes).
+    Removing uart.o(.text.UART9BitAddrSet), (10 bytes).
+    Removing uart.o(.ARM.exidx.text.UART9BitAddrSet), (8 bytes).
+    Removing uart.o(.text.UART9BitAddrSend), (38 bytes).
+    Removing uart.o(.ARM.exidx.text.UART9BitAddrSend), (8 bytes).
+    Removing uart.o(.text.UARTLoopbackEnable), (10 bytes).
+    Removing uart.o(.ARM.exidx.text.UARTLoopbackEnable), (8 bytes).
+    Removing uart.o(.rodata.g_ppui32UARTIntMap), (64 bytes).
+    Removing uart.o(.rodata.g_ppui32UARTIntMapSnowflake), (64 bytes).
+    Removing uartstdio.o(.text), (0 bytes).
+    Removing uartstdio.o(.ARM.exidx.text.UARTStdioConfig), (8 bytes).
+    Removing uartstdio.o(.ARM.exidx.text.UARTwrite), (8 bytes).
+    Removing uartstdio.o(.text.UARTgets), (192 bytes).
+    Removing uartstdio.o(.ARM.exidx.text.UARTgets), (8 bytes).
+    Removing uartstdio.o(.text.UARTgetc), (20 bytes).
+    Removing uartstdio.o(.ARM.exidx.text.UARTgetc), (8 bytes).
+    Removing uartstdio.o(.ARM.exidx.text.UARTvprintf), (8 bytes).
+    Removing uartstdio.o(.ARM.exidx.text.UARTprintf), (8 bytes).
+    Removing uartstdio.o(.bss.UARTgets.bLastWasCR), (1 bytes).
+    Removing gpio.o(i.GPIOADCTriggerDisable), (14 bytes).
+    Removing gpio.o(i.GPIOADCTriggerEnable), (12 bytes).
+    Removing gpio.o(i.GPIODMATriggerDisable), (14 bytes).
+    Removing gpio.o(i.GPIODMATriggerEnable), (12 bytes).
+    Removing gpio.o(i.GPIODirModeGet), (34 bytes).
+    Removing gpio.o(i.GPIOIntClear), (6 bytes).
+    Removing gpio.o(i.GPIOIntDisable), (14 bytes).
+    Removing gpio.o(i.GPIOIntEnable), (12 bytes).
+    Removing gpio.o(i.GPIOIntRegister), (26 bytes).
+    Removing gpio.o(i.GPIOIntRegisterPin), (30 bytes).
+    Removing gpio.o(i.GPIOIntStatus), (14 bytes).
+    Removing gpio.o(i.GPIOIntTypeGet), (68 bytes).
+    Removing gpio.o(i.GPIOIntTypeSet), (80 bytes).
+    Removing gpio.o(i.GPIOIntUnregister), (22 bytes).
+    Removing gpio.o(i.GPIOIntUnregisterPin), (26 bytes).
+    Removing gpio.o(i.GPIOPadConfigGet), (204 bytes).
+    Removing gpio.o(i.GPIOPinRead), (6 bytes).
+    Removing gpio.o(i.GPIOPinTypeADC), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeCAN), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeComparator), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeComparatorOutput), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeDIVSCLK), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeEPI), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeEthernetLED), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeEthernetMII), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeGPIOInput), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeGPIOOutput), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeGPIOOutputOD), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeHibernateRTCCLK), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeI2C), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeI2CSCL), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeLCD), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeOneWire), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypePWM), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeQEI), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeSSI), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeTimer), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeTrace), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeUSBAnalog), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeUSBDigital), (28 bytes).
+    Removing gpio.o(i.GPIOPinTypeWakeHigh), (30 bytes).
+    Removing gpio.o(i.GPIOPinTypeWakeLow), (30 bytes).
+    Removing gpio.o(i.GPIOPinWakeStatus), (6 bytes).
+    Removing gpio.o(i.GPIOPinWrite), (6 bytes).
+    Removing gpio.o(i._GPIOIntNumberGet), (80 bytes).
+    Removing interrupt.o(i.IntDisable), (100 bytes).
+    Removing interrupt.o(i.IntEnable), (100 bytes).
+    Removing interrupt.o(i.IntIsEnabled), (96 bytes).
+    Removing interrupt.o(i.IntMasterDisable), (14 bytes).
+    Removing interrupt.o(i.IntMasterEnable), (14 bytes).
+    Removing interrupt.o(i.IntPendClear), (68 bytes).
+    Removing interrupt.o(i.IntPendSet), (84 bytes).
+    Removing interrupt.o(i.IntPriorityGet), (28 bytes).
+    Removing interrupt.o(i.IntPriorityGroupingGet), (36 bytes).
+    Removing interrupt.o(i.IntPriorityGroupingSet), (28 bytes).
+    Removing interrupt.o(i.IntPriorityMaskGet), (4 bytes).
+    Removing interrupt.o(i.IntPriorityMaskSet), (4 bytes).
+    Removing interrupt.o(i.IntPrioritySet), (40 bytes).
+    Removing interrupt.o(i.IntRegister), (52 bytes).
+    Removing interrupt.o(i.IntTrigger), (12 bytes).
+    Removing interrupt.o(i.IntUnregister), (20 bytes).
+    Removing interrupt.o(i._IntDefaultHandler), (2 bytes).
+    Removing interrupt.o(.constdata), (268 bytes).
+    Removing interrupt.o(vtable), (620 bytes).
+    Removing sysctl.o(.emb_text), (6 bytes).
+    Removing sysctl.o(i.SysCtlAltClkConfig), (12 bytes).
+    Removing sysctl.o(i.SysCtlClockFreqSet), (740 bytes).
+    Removing sysctl.o(i.SysCtlClockGet), (340 bytes).
+    Removing sysctl.o(i.SysCtlClockOutConfig), (20 bytes).
+    Removing sysctl.o(i.SysCtlClockSet), (288 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleep), (32 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleepClockConfigSet), (112 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleepClockSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlDeepSleepPowerSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlFlashSectorSizeGet), (56 bytes).
+    Removing sysctl.o(i.SysCtlFlashSizeGet), (56 bytes).
+    Removing sysctl.o(i.SysCtlGPIOAHBDisable), (28 bytes).
+    Removing sysctl.o(i.SysCtlGPIOAHBEnable), (24 bytes).
+    Removing sysctl.o(i.SysCtlIntClear), (12 bytes).
+    Removing sysctl.o(i.SysCtlIntDisable), (16 bytes).
+    Removing sysctl.o(i.SysCtlIntEnable), (16 bytes).
+    Removing sysctl.o(i.SysCtlIntRegister), (20 bytes).
+    Removing sysctl.o(i.SysCtlIntStatus), (16 bytes).
+    Removing sysctl.o(i.SysCtlIntUnregister), (18 bytes).
+    Removing sysctl.o(i.SysCtlLDODeepSleepGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlLDODeepSleepSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlLDOSleepGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlLDOSleepSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlMOSCConfigSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlNMIClear), (16 bytes).
+    Removing sysctl.o(i.SysCtlNMIStatus), (12 bytes).
+    Removing sysctl.o(i.SysCtlPIOSCCalibrate), (76 bytes).
+    Removing sysctl.o(i.SysCtlPWMClockGet), (24 bytes).
+    Removing sysctl.o(i.SysCtlPWMClockSet), (20 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralClockGating), (68 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralDeepSleepDisable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralDeepSleepEnable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralDisable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralPowerOff), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralPowerOn), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralReady), (44 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralReset), (60 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralSleepDisable), (40 bytes).
+    Removing sysctl.o(i.SysCtlPeripheralSleepEnable), (40 bytes).
+    Removing sysctl.o(i.SysCtlReset), (16 bytes).
+    Removing sysctl.o(i.SysCtlResetBehaviorGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlResetBehaviorSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlResetCauseClear), (16 bytes).
+    Removing sysctl.o(i.SysCtlResetCauseGet), (12 bytes).
+    Removing sysctl.o(i.SysCtlSRAMSizeGet), (16 bytes).
+    Removing sysctl.o(i.SysCtlSleep), (4 bytes).
+    Removing sysctl.o(i.SysCtlSleepPowerSet), (12 bytes).
+    Removing sysctl.o(i.SysCtlUSBPLLDisable), (16 bytes).
+    Removing sysctl.o(i.SysCtlUSBPLLEnable), (16 bytes).
+    Removing sysctl.o(i.SysCtlVCOGet), (120 bytes).
+    Removing sysctl.o(i.SysCtlVoltageEventClear), (16 bytes).
+    Removing sysctl.o(i.SysCtlVoltageEventConfig), (12 bytes).
+    Removing sysctl.o(i.SysCtlVoltageEventStatus), (12 bytes).
+    Removing sysctl.o(.constdata), (596 bytes).
+    Removing cpu.o(.emb_text), (38 bytes).
+
+281 unused section(s) (total 8500 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit_hlt.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command_hlt.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch_hlt.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  aeabi_memset.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr.o ABSOLUTE
+    ../clib/memcpset.s                       0x00000000   Number         0  rt_memclr_w.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/fpinit.s                        0x00000000   Number         0  fpinit.o ABSOLUTE
+    cpu.c                                    0x00000000   Number         0  cpu.o ABSOLUTE
+    cpu.c                                    0x00000000   Number         0  cpu.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    enc28j60.c                               0x00000000   Number         0  enc28j60.o ABSOLUTE
+    gpio.c                                   0x00000000   Number         0  gpio.o ABSOLUTE
+    initHw.c                                 0x00000000   Number         0  inithw.o ABSOLUTE
+    interrupt.c                              0x00000000   Number         0  interrupt.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    startup_rvmdk.S                          0x00000000   Number         0  startup_rvmdk.o ABSOLUTE
+    sysctl.c                                 0x00000000   Number         0  sysctl.o ABSOLUTE
+    sysctl.c                                 0x00000000   Number         0  sysctl.o ABSOLUTE
+    uart.c                                   0x00000000   Number         0  uart.o ABSOLUTE
+    uartstdio.c                              0x00000000   Number         0  uartstdio.o ABSOLUTE
+    wait.c                                   0x00000000   Number         0  wait.o ABSOLUTE
+    RESET                                    0x00000000   Section      648  startup_rvmdk.o(RESET)
+    $v0                                      0x0000026c   Number         0  startup_rvmdk.o(RESET)
+    NmiSR                                    0x00000281   Thumb Code     0  startup_rvmdk.o(RESET)
+    FaultISR                                 0x00000283   Thumb Code     0  startup_rvmdk.o(RESET)
+    IntDefaultHandler                        0x00000285   Thumb Code     0  startup_rvmdk.o(RESET)
+    !!!main                                  0x00000288   Section        8  __main.o(!!!main)
+    !!!scatter                               0x00000290   Section       52  __scatter.o(!!!scatter)
+    !!handler_copy                           0x000002c4   Section       26  __scatter_copy.o(!!handler_copy)
+    !!handler_zi                             0x000002e0   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x000002fc   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000001          0x000002fe   Section        4  libinit2.o(.ARM.Collect$$libinit$$00000001)
+    .ARM.Collect$$libinit$$00000004          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    .ARM.Collect$$libinit$$0000000A          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    .ARM.Collect$$libinit$$0000000C          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000E          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    .ARM.Collect$$libinit$$00000011          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    .ARM.Collect$$libinit$$00000013          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$00000025          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    .ARM.Collect$$libinit$$0000002C          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    .ARM.Collect$$libinit$$0000002E          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000032          0x00000302   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    .ARM.Collect$$libinit$$00000033          0x00000302   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    .ARM.Collect$$libshutdown$$00000000      0x00000304   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000002      0x00000306   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    .ARM.Collect$$libshutdown$$00000004      0x00000306   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    .ARM.Collect$$libshutdown$$00000007      0x00000306   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    .ARM.Collect$$libshutdown$$0000000A      0x00000306   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    .ARM.Collect$$libshutdown$$0000000C      0x00000306   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    .ARM.Collect$$libshutdown$$0000000F      0x00000306   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$libshutdown$$00000010      0x00000306   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    .ARM.Collect$$rtentry$$00000000          0x00000308   Section        0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x00000308   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x00000308   Section        6  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x0000030e   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x0000030e   Section        4  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x00000312   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x00000312   Section        8  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x0000031a   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x0000031c   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x0000031c   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x00000320   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    $v0                                      0x00000328   Number         0  startup_rvmdk.o(.text)
+    .text                                    0x00000328   Section       24  startup_rvmdk.o(.text)
+    .text                                    0x00000340   Section       16  aeabi_memset.o(.text)
+    .text                                    0x00000350   Section        0  heapauxi.o(.text)
+    .text                                    0x00000356   Section       68  rt_memclr.o(.text)
+    .text                                    0x0000039a   Section       78  rt_memclr_w.o(.text)
+    .text                                    0x000003e8   Section       74  sys_stackheap_outer.o(.text)
+    .text                                    0x00000432   Section        0  exit.o(.text)
+    .text                                    0x00000444   Section        8  libspace.o(.text)
+    .text                                    0x0000044c   Section        0  sys_exit.o(.text)
+    .text                                    0x00000458   Section        2  use_no_semi.o(.text)
+    .text                                    0x0000045a   Section        0  indicate_semi.o(.text)
+    [Anonymous Symbol]                       0x0000045c   Section        0  main.o(.text.ConfigureUSBUART0)
+    [Anonymous Symbol]                       0x000004b8   Section        0  uart.o(.text.UARTCharPut)
+    [Anonymous Symbol]                       0x000004c4   Section        0  uart.o(.text.UARTClockSourceSet)
+    [Anonymous Symbol]                       0x000004cc   Section        0  uart.o(.text.UARTConfigSetExpClk)
+    [Anonymous Symbol]                       0x00000518   Section        0  uart.o(.text.UARTDisable)
+    [Anonymous Symbol]                       0x00000534   Section        0  uart.o(.text.UARTEnable)
+    [Anonymous Symbol]                       0x00000548   Section        0  uartstdio.o(.text.UARTStdioConfig)
+    g_ui32UARTPeriph                         0x0000058c   Number         0  uartstdio.o(.text.UARTStdioConfig)
+    g_ui32UARTBase                           0x00000598   Number         0  uartstdio.o(.text.UARTStdioConfig)
+    [Anonymous Symbol]                       0x000005a4   Section        0  uartstdio.o(.text.UARTprintf)
+    [Anonymous Symbol]                       0x000005c4   Section        0  uartstdio.o(.text.UARTvprintf)
+    [Anonymous Symbol]                       0x00000880   Section        0  uartstdio.o(.text.UARTwrite)
+    [Anonymous Symbol]                       0x000008c0   Section        0  enc28j60.o(.text.etherClearReg)
+    [Anonymous Symbol]                       0x000008ec   Section        0  enc28j60.o(.text.etherCsOff)
+    [Anonymous Symbol]                       0x000008fc   Section        0  enc28j60.o(.text.etherCsOn)
+    [Anonymous Symbol]                       0x00000914   Section        0  enc28j60.o(.text.etherGetPacket)
+    [Anonymous Symbol]                       0x000009a8   Section        0  enc28j60.o(.text.etherGetUdpData)
+    [Anonymous Symbol]                       0x000009e4   Section        0  enc28j60.o(.text.etherInit)
+    [Anonymous Symbol]                       0x00000b24   Section        0  enc28j60.o(.text.etherIsArp)
+    [Anonymous Symbol]                       0x00000b94   Section        0  enc28j60.o(.text.etherIsIp)
+    [Anonymous Symbol]                       0x00000bec   Section        0  enc28j60.o(.text.etherIsIpUnicast)
+    [Anonymous Symbol]                       0x00000c40   Section        0  enc28j60.o(.text.etherIsOverflow)
+    [Anonymous Symbol]                       0x00000c5c   Section        0  enc28j60.o(.text.etherIsPingReq)
+    [Anonymous Symbol]                       0x00000ca8   Section        0  enc28j60.o(.text.etherIsUdp)
+    [Anonymous Symbol]                       0x00000d34   Section        0  enc28j60.o(.text.etherKbhit)
+    [Anonymous Symbol]                       0x00000d44   Section        0  enc28j60.o(.text.etherPutPacket)
+    [Anonymous Symbol]                       0x00000df8   Section        0  enc28j60.o(.text.etherReadMem)
+    [Anonymous Symbol]                       0x00000e08   Section        0  enc28j60.o(.text.etherReadMemStart)
+    [Anonymous Symbol]                       0x00000e1c   Section        0  enc28j60.o(.text.etherReadMemStop)
+    [Anonymous Symbol]                       0x00000e24   Section        0  enc28j60.o(.text.etherReadReg)
+    [Anonymous Symbol]                       0x00000e4c   Section        0  enc28j60.o(.text.etherSendArpResp)
+    [Anonymous Symbol]                       0x00000ed8   Section        0  enc28j60.o(.text.etherSendPingResp)
+    [Anonymous Symbol]                       0x00000f90   Section        0  enc28j60.o(.text.etherSendUdpData)
+    [Anonymous Symbol]                       0x000010dc   Section        0  enc28j60.o(.text.etherSetBank)
+    [Anonymous Symbol]                       0x000010f4   Section        0  enc28j60.o(.text.etherSetIpAddress)
+    [Anonymous Symbol]                       0x00001110   Section        0  enc28j60.o(.text.etherSetReg)
+    [Anonymous Symbol]                       0x0000113c   Section        0  enc28j60.o(.text.etherSumWords)
+    [Anonymous Symbol]                       0x00001180   Section        0  enc28j60.o(.text.etherWriteMem)
+    [Anonymous Symbol]                       0x0000118c   Section        0  enc28j60.o(.text.etherWriteMemStart)
+    [Anonymous Symbol]                       0x000011a0   Section        0  enc28j60.o(.text.etherWriteMemStop)
+    [Anonymous Symbol]                       0x000011a8   Section        0  enc28j60.o(.text.etherWritePhy)
+    [Anonymous Symbol]                       0x000011d0   Section        0  enc28j60.o(.text.etherWriteReg)
+    [Anonymous Symbol]                       0x000011fc   Section        0  enc28j60.o(.text.getEtherChecksum)
+    [Anonymous Symbol]                       0x00001228   Section        0  enc28j60.o(.text.htons)
+    [Anonymous Symbol]                       0x0000122c   Section        0  inithw.o(.text.initHw)
+    [Anonymous Symbol]                       0x000012f8   Section        0  main.o(.text.main)
+    [Anonymous Symbol]                       0x00001404   Section        0  main.o(.text.printPacket)
+    [Anonymous Symbol]                       0x000014a4   Section        0  enc28j60.o(.text.spiRead)
+    [Anonymous Symbol]                       0x000014b4   Section        0  enc28j60.o(.text.spiWrite)
+    WMS_LOOP0                                0x000014c8   Number         0  wait.o(.text.waitMicrosecond)
+    [Anonymous Symbol]                       0x000014c8   Section        0  wait.o(.text.waitMicrosecond)
+    WMS_LOOP1                                0x000014cc   Number         0  wait.o(.text.waitMicrosecond)
+    WMS_DONE1                                0x000014d6   Number         0  wait.o(.text.waitMicrosecond)
+    WMS_DONE0                                0x000014de   Number         0  wait.o(.text.waitMicrosecond)
+    i.GPIODirModeSet                         0x000014e0   Section        0  gpio.o(i.GPIODirModeSet)
+    i.GPIOPadConfigSet                       0x00001508   Section        0  gpio.o(i.GPIOPadConfigSet)
+    i.GPIOPinConfigure                       0x00001640   Section        0  gpio.o(i.GPIOPinConfigure)
+    i.GPIOPinTypeUART                        0x00001684   Section        0  gpio.o(i.GPIOPinTypeUART)
+    i.SysCtlPeripheralEnable                 0x000016a0   Section        0  sysctl.o(i.SysCtlPeripheralEnable)
+    i.SysCtlPeripheralPresent                0x000016c8   Section        0  sysctl.o(i.SysCtlPeripheralPresent)
+    $v0                                      0x000016f4   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fpinit                             0x000016f4   Section       26  fpinit.o(x$fpl$fpinit)
+    g_ppui32GPIOIntMapBlizzard               0x00001710   Data         192  gpio.o(.constdata)
+    .constdata                               0x00001710   Section      552  gpio.o(.constdata)
+    g_ppui32GPIOIntMapSnowflake              0x000017d0   Data         216  gpio.o(.constdata)
+    g_pui32GPIOBaseAddrs                     0x000018a8   Data         144  gpio.o(.constdata)
+    .bss                                     0x20000008   Section       96  libspace.o(.bss)
+    g_ui32Base                               0x20000074   Data           4  uartstdio.o(.bss.g_ui32Base)
+    [Anonymous Symbol]                       0x20000074   Section        0  uartstdio.o(.bss.g_ui32Base)
+    HeapMem                                  0x20000090   Data           0  startup_rvmdk.o(HEAP)
+    StackMem                                 0x20000090   Data           0  startup_rvmdk.o(STACK)
+    HEAP                                     0x20000090   Section        0  startup_rvmdk.o(HEAP)
+    STACK                                    0x20000090   Section      256  startup_rvmdk.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  startup_rvmdk.o(RESET)
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __arm_preinit_                            - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _init_alloc                               - Undefined Weak Reference
+    _init_user_alloc                          - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminate_alloc                          - Undefined Weak Reference
+    _terminate_user_alloc                     - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    Reset_Handler                            0x0000026d   Thumb Code     0  startup_rvmdk.o(RESET)
+    __main                                   0x00000289   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x00000291   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x00000291   Thumb Code    44  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x00000291   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_null                       0x0000029f   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_copy                       0x000002c5   Thumb Code    26  __scatter_copy.o(!!handler_copy)
+    __scatterload_zeroinit                   0x000002e1   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x000002fd   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_fp_1                       0x000002ff   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000001)
+    __rt_lib_init_alloca_1                   0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_argv_1                     0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002C)
+    __rt_lib_init_atexit_1                   0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_clock_1                    0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_cpp_1                      0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    __rt_lib_init_exceptions_1               0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_fp_trap_1                  0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_getenv_1                   0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_heap_1                     0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000A)
+    __rt_lib_init_lc_collate_1               0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000011)
+    __rt_lib_init_lc_ctype_1                 0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_monetary_1              0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_numeric_1               0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_lc_time_1                  0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_preinit_1                  0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    __rt_lib_init_rand_1                     0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    __rt_lib_init_return                     0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000033)
+    __rt_lib_init_signal_1                   0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_stdio_1                    0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    __rt_lib_init_user_alloc_1               0x00000303   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_shutdown                        0x00000305   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_cpp_1                  0x00000307   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    __rt_lib_shutdown_fp_trap_1              0x00000307   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    __rt_lib_shutdown_heap_1                 0x00000307   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_return                 0x00000307   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    __rt_lib_shutdown_signal_1               0x00000307   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    __rt_lib_shutdown_stdio_1                0x00000307   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    __rt_lib_shutdown_user_alloc_1           0x00000307   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    __rt_entry                               0x00000309   Thumb Code     0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x00000309   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x00000309   Thumb Code     0  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x0000030f   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x0000030f   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x00000313   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x00000313   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x0000031b   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x0000031d   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x0000031d   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x00000321   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    __user_initial_stackheap                 0x00000329   Thumb Code     0  startup_rvmdk.o(.text)
+    __aeabi_memset                           0x00000341   Thumb Code    16  aeabi_memset.o(.text)
+    __use_two_region_memory                  0x00000351   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x00000353   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x00000355   Thumb Code     2  heapauxi.o(.text)
+    __aeabi_memclr                           0x00000357   Thumb Code     0  rt_memclr.o(.text)
+    __rt_memclr                              0x00000357   Thumb Code    68  rt_memclr.o(.text)
+    _memset                                  0x0000035b   Thumb Code     0  rt_memclr.o(.text)
+    __aeabi_memclr4                          0x0000039b   Thumb Code     0  rt_memclr_w.o(.text)
+    __aeabi_memclr8                          0x0000039b   Thumb Code     0  rt_memclr_w.o(.text)
+    __rt_memclr_w                            0x0000039b   Thumb Code    78  rt_memclr_w.o(.text)
+    _memset_w                                0x0000039f   Thumb Code     0  rt_memclr_w.o(.text)
+    __user_setup_stackheap                   0x000003e9   Thumb Code    74  sys_stackheap_outer.o(.text)
+    exit                                     0x00000433   Thumb Code    18  exit.o(.text)
+    __user_libspace                          0x00000445   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x00000445   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x00000445   Thumb Code     0  libspace.o(.text)
+    _sys_exit                                0x0000044d   Thumb Code     8  sys_exit.o(.text)
+    __I$use$semihosting                      0x00000459   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x00000459   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x0000045b   Thumb Code     0  indicate_semi.o(.text)
+    ConfigureUSBUART0                        0x0000045d   Thumb Code    92  main.o(.text.ConfigureUSBUART0)
+    UARTCharPut                              0x000004b9   Thumb Code    10  uart.o(.text.UARTCharPut)
+    UARTClockSourceSet                       0x000004c5   Thumb Code     6  uart.o(.text.UARTClockSourceSet)
+    UARTConfigSetExpClk                      0x000004cd   Thumb Code    74  uart.o(.text.UARTConfigSetExpClk)
+    UARTDisable                              0x00000519   Thumb Code    26  uart.o(.text.UARTDisable)
+    UARTEnable                               0x00000535   Thumb Code    20  uart.o(.text.UARTEnable)
+    UARTStdioConfig                          0x00000549   Thumb Code    92  uartstdio.o(.text.UARTStdioConfig)
+    UARTprintf                               0x000005a5   Thumb Code    32  uartstdio.o(.text.UARTprintf)
+    UARTvprintf                              0x000005c5   Thumb Code   700  uartstdio.o(.text.UARTvprintf)
+    UARTwrite                                0x00000881   Thumb Code    62  uartstdio.o(.text.UARTwrite)
+    etherClearReg                            0x000008c1   Thumb Code    42  enc28j60.o(.text.etherClearReg)
+    etherCsOff                               0x000008ed   Thumb Code    14  enc28j60.o(.text.etherCsOff)
+    etherCsOn                                0x000008fd   Thumb Code    22  enc28j60.o(.text.etherCsOn)
+    etherGetPacket                           0x00000915   Thumb Code   148  enc28j60.o(.text.etherGetPacket)
+    etherGetUdpData                          0x000009a9   Thumb Code    60  enc28j60.o(.text.etherGetUdpData)
+    etherInit                                0x000009e5   Thumb Code   320  enc28j60.o(.text.etherInit)
+    etherIsArp                               0x00000b25   Thumb Code   110  enc28j60.o(.text.etherIsArp)
+    etherIsIp                                0x00000b95   Thumb Code    88  enc28j60.o(.text.etherIsIp)
+    etherIsIpUnicast                         0x00000bed   Thumb Code    84  enc28j60.o(.text.etherIsIpUnicast)
+    etherIsOverflow                          0x00000c41   Thumb Code    26  enc28j60.o(.text.etherIsOverflow)
+    etherIsPingReq                           0x00000c5d   Thumb Code    76  enc28j60.o(.text.etherIsPingReq)
+    etherIsUdp                               0x00000ca9   Thumb Code   140  enc28j60.o(.text.etherIsUdp)
+    etherKbhit                               0x00000d35   Thumb Code    14  enc28j60.o(.text.etherKbhit)
+    etherPutPacket                           0x00000d45   Thumb Code   180  enc28j60.o(.text.etherPutPacket)
+    etherReadMem                             0x00000df9   Thumb Code    14  enc28j60.o(.text.etherReadMem)
+    etherReadMemStart                        0x00000e09   Thumb Code    18  enc28j60.o(.text.etherReadMemStart)
+    etherReadMemStop                         0x00000e1d   Thumb Code     8  enc28j60.o(.text.etherReadMemStop)
+    etherReadReg                             0x00000e25   Thumb Code    40  enc28j60.o(.text.etherReadReg)
+    etherSendArpResp                         0x00000e4d   Thumb Code   138  enc28j60.o(.text.etherSendArpResp)
+    etherSendPingResp                        0x00000ed9   Thumb Code   182  enc28j60.o(.text.etherSendPingResp)
+    etherSendUdpData                         0x00000f91   Thumb Code   332  enc28j60.o(.text.etherSendUdpData)
+    etherSetBank                             0x000010dd   Thumb Code    22  enc28j60.o(.text.etherSetBank)
+    etherSetIpAddress                        0x000010f5   Thumb Code    26  enc28j60.o(.text.etherSetIpAddress)
+    etherSetReg                              0x00001111   Thumb Code    42  enc28j60.o(.text.etherSetReg)
+    etherSumWords                            0x0000113d   Thumb Code    68  enc28j60.o(.text.etherSumWords)
+    etherWriteMem                            0x00001181   Thumb Code    12  enc28j60.o(.text.etherWriteMem)
+    etherWriteMemStart                       0x0000118d   Thumb Code    18  enc28j60.o(.text.etherWriteMemStart)
+    etherWriteMemStop                        0x000011a1   Thumb Code     8  enc28j60.o(.text.etherWriteMemStop)
+    etherWritePhy                            0x000011a9   Thumb Code    38  enc28j60.o(.text.etherWritePhy)
+    etherWriteReg                            0x000011d1   Thumb Code    42  enc28j60.o(.text.etherWriteReg)
+    getEtherChecksum                         0x000011fd   Thumb Code    42  enc28j60.o(.text.getEtherChecksum)
+    htons                                    0x00001229   Thumb Code     4  enc28j60.o(.text.htons)
+    initHw                                   0x0000122d   Thumb Code   202  inithw.o(.text.initHw)
+    main                                     0x000012f9   Thumb Code   268  main.o(.text.main)
+    printPacket                              0x00001405   Thumb Code   160  main.o(.text.printPacket)
+    spiRead                                  0x000014a5   Thumb Code    14  enc28j60.o(.text.spiRead)
+    spiWrite                                 0x000014b5   Thumb Code    20  enc28j60.o(.text.spiWrite)
+    waitMicrosecond                          0x000014c9   Thumb Code    24  wait.o(.text.waitMicrosecond)
+    GPIODirModeSet                           0x000014e1   Thumb Code    40  gpio.o(i.GPIODirModeSet)
+    GPIOPadConfigSet                         0x00001509   Thumb Code   312  gpio.o(i.GPIOPadConfigSet)
+    GPIOPinConfigure                         0x00001641   Thumb Code    60  gpio.o(i.GPIOPinConfigure)
+    GPIOPinTypeUART                          0x00001685   Thumb Code    28  gpio.o(i.GPIOPinTypeUART)
+    SysCtlPeripheralEnable                   0x000016a1   Thumb Code    36  sysctl.o(i.SysCtlPeripheralEnable)
+    SysCtlPeripheralPresent                  0x000016c9   Thumb Code    40  sysctl.o(i.SysCtlPeripheralPresent)
+    _fp_init                                 0x000016f5   Thumb Code    26  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x0000170d   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x0000170d   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    Region$$Table$$Base                      0x00001938   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00001958   Number         0  anon$$obj.o(Region$$Table)
+    macAddress                               0x20000000   Data           6  enc28j60.o(.data.macAddress)
+    __libspace_start                         0x20000008   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x20000068   Data           0  libspace.o(.bss)
+    arp                                      0x20000068   Data           4  enc28j60.o(.bss.arp)
+    enc28j60                                 0x2000006c   Data           4  enc28j60.o(.bss.enc28j60)
+    ether                                    0x20000070   Data           4  enc28j60.o(.bss.ether)
+    icmp                                     0x20000078   Data           4  enc28j60.o(.bss.icmp)
+    ip                                       0x2000007c   Data           4  enc28j60.o(.bss.ip)
+    ipv4Address                              0x20000080   Data           4  enc28j60.o(.bss.ipv4Address)
+    nextPacketLsb                            0x20000084   Data           1  enc28j60.o(.bss.nextPacketLsb)
+    nextPacketMsb                            0x20000085   Data           1  enc28j60.o(.bss.nextPacketMsb)
+    sum                                      0x20000088   Data           4  enc28j60.o(.bss.sum)
+    udp                                      0x2000008c   Data           4  enc28j60.o(.bss.udp)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x0000026d
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00001960, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00001958, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x00000288   Code   RO           18  * RESET               startup_rvmdk.o
+    0x00000288   0x00000288   0x00000008   Code   RO         1082  * !!!main             c_w.l(__main.o)
+    0x00000290   0x00000290   0x00000034   Code   RO         1249    !!!scatter          c_w.l(__scatter.o)
+    0x000002c4   0x000002c4   0x0000001a   Code   RO         1251    !!handler_copy      c_w.l(__scatter_copy.o)
+    0x000002de   0x000002de   0x00000002   PAD
+    0x000002e0   0x000002e0   0x0000001c   Code   RO         1253    !!handler_zi        c_w.l(__scatter_zi.o)
+    0x000002fc   0x000002fc   0x00000002   Code   RO         1113    .ARM.Collect$$libinit$$00000000  c_w.l(libinit.o)
+    0x000002fe   0x000002fe   0x00000004   Code   RO         1119    .ARM.Collect$$libinit$$00000001  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1122    .ARM.Collect$$libinit$$00000004  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1125    .ARM.Collect$$libinit$$0000000A  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1127    .ARM.Collect$$libinit$$0000000C  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1129    .ARM.Collect$$libinit$$0000000E  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1132    .ARM.Collect$$libinit$$00000011  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1134    .ARM.Collect$$libinit$$00000013  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1136    .ARM.Collect$$libinit$$00000015  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1138    .ARM.Collect$$libinit$$00000017  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1140    .ARM.Collect$$libinit$$00000019  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1142    .ARM.Collect$$libinit$$0000001B  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1144    .ARM.Collect$$libinit$$0000001D  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1146    .ARM.Collect$$libinit$$0000001F  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1148    .ARM.Collect$$libinit$$00000021  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1150    .ARM.Collect$$libinit$$00000023  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1152    .ARM.Collect$$libinit$$00000025  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1156    .ARM.Collect$$libinit$$0000002C  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1158    .ARM.Collect$$libinit$$0000002E  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1160    .ARM.Collect$$libinit$$00000030  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000000   Code   RO         1162    .ARM.Collect$$libinit$$00000032  c_w.l(libinit2.o)
+    0x00000302   0x00000302   0x00000002   Code   RO         1163    .ARM.Collect$$libinit$$00000033  c_w.l(libinit2.o)
+    0x00000304   0x00000304   0x00000002   Code   RO         1185    .ARM.Collect$$libshutdown$$00000000  c_w.l(libshutdown.o)
+    0x00000306   0x00000306   0x00000000   Code   RO         1200    .ARM.Collect$$libshutdown$$00000002  c_w.l(libshutdown2.o)
+    0x00000306   0x00000306   0x00000000   Code   RO         1202    .ARM.Collect$$libshutdown$$00000004  c_w.l(libshutdown2.o)
+    0x00000306   0x00000306   0x00000000   Code   RO         1205    .ARM.Collect$$libshutdown$$00000007  c_w.l(libshutdown2.o)
+    0x00000306   0x00000306   0x00000000   Code   RO         1208    .ARM.Collect$$libshutdown$$0000000A  c_w.l(libshutdown2.o)
+    0x00000306   0x00000306   0x00000000   Code   RO         1210    .ARM.Collect$$libshutdown$$0000000C  c_w.l(libshutdown2.o)
+    0x00000306   0x00000306   0x00000000   Code   RO         1213    .ARM.Collect$$libshutdown$$0000000F  c_w.l(libshutdown2.o)
+    0x00000306   0x00000306   0x00000002   Code   RO         1214    .ARM.Collect$$libshutdown$$00000010  c_w.l(libshutdown2.o)
+    0x00000308   0x00000308   0x00000000   Code   RO         1084    .ARM.Collect$$rtentry$$00000000  c_w.l(__rtentry.o)
+    0x00000308   0x00000308   0x00000000   Code   RO         1088    .ARM.Collect$$rtentry$$00000002  c_w.l(__rtentry2.o)
+    0x00000308   0x00000308   0x00000006   Code   RO         1100    .ARM.Collect$$rtentry$$00000004  c_w.l(__rtentry4.o)
+    0x0000030e   0x0000030e   0x00000000   Code   RO         1090    .ARM.Collect$$rtentry$$00000009  c_w.l(__rtentry2.o)
+    0x0000030e   0x0000030e   0x00000004   Code   RO         1091    .ARM.Collect$$rtentry$$0000000A  c_w.l(__rtentry2.o)
+    0x00000312   0x00000312   0x00000000   Code   RO         1093    .ARM.Collect$$rtentry$$0000000C  c_w.l(__rtentry2.o)
+    0x00000312   0x00000312   0x00000008   Code   RO         1094    .ARM.Collect$$rtentry$$0000000D  c_w.l(__rtentry2.o)
+    0x0000031a   0x0000031a   0x00000002   Code   RO         1117    .ARM.Collect$$rtexit$$00000000  c_w.l(rtexit.o)
+    0x0000031c   0x0000031c   0x00000000   Code   RO         1165    .ARM.Collect$$rtexit$$00000002  c_w.l(rtexit2.o)
+    0x0000031c   0x0000031c   0x00000004   Code   RO         1166    .ARM.Collect$$rtexit$$00000003  c_w.l(rtexit2.o)
+    0x00000320   0x00000320   0x00000006   Code   RO         1167    .ARM.Collect$$rtexit$$00000004  c_w.l(rtexit2.o)
+    0x00000326   0x00000326   0x00000002   PAD
+    0x00000328   0x00000328   0x00000018   Code   RO           19    .text               startup_rvmdk.o
+    0x00000340   0x00000340   0x00000010   Code   RO         1078    .text               c_w.l(aeabi_memset.o)
+    0x00000350   0x00000350   0x00000006   Code   RO         1080    .text               c_w.l(heapauxi.o)
+    0x00000356   0x00000356   0x00000044   Code   RO         1085    .text               c_w.l(rt_memclr.o)
+    0x0000039a   0x0000039a   0x0000004e   Code   RO         1102    .text               c_w.l(rt_memclr_w.o)
+    0x000003e8   0x000003e8   0x0000004a   Code   RO         1104    .text               c_w.l(sys_stackheap_outer.o)
+    0x00000432   0x00000432   0x00000012   Code   RO         1106    .text               c_w.l(exit.o)
+    0x00000444   0x00000444   0x00000008   Code   RO         1114    .text               c_w.l(libspace.o)
+    0x0000044c   0x0000044c   0x0000000c   Code   RO         1175    .text               c_w.l(sys_exit.o)
+    0x00000458   0x00000458   0x00000002   Code   RO         1190    .text               c_w.l(use_no_semi.o)
+    0x0000045a   0x0000045a   0x00000000   Code   RO         1192    .text               c_w.l(indicate_semi.o)
+    0x0000045a   0x0000045a   0x00000002   PAD
+    0x0000045c   0x0000045c   0x0000005c   Code   RO            2    .text.ConfigureUSBUART0  main.o
+    0x000004b8   0x000004b8   0x0000000a   Code   RO          197    .text.UARTCharPut   uart.o
+    0x000004c2   0x000004c2   0x00000002   PAD
+    0x000004c4   0x000004c4   0x00000006   Code   RO          225    .text.UARTClockSourceSet  uart.o
+    0x000004ca   0x000004ca   0x00000002   PAD
+    0x000004cc   0x000004cc   0x0000004a   Code   RO          151    .text.UARTConfigSetExpClk  uart.o
+    0x00000516   0x00000516   0x00000002   PAD
+    0x00000518   0x00000518   0x0000001a   Code   RO          153    .text.UARTDisable   uart.o
+    0x00000532   0x00000532   0x00000002   PAD
+    0x00000534   0x00000534   0x00000014   Code   RO          155    .text.UARTEnable    uart.o
+    0x00000548   0x00000548   0x0000005c   Code   RO          249    .text.UARTStdioConfig  uartstdio.o
+    0x000005a4   0x000005a4   0x00000020   Code   RO          259    .text.UARTprintf    uartstdio.o
+    0x000005c4   0x000005c4   0x000002bc   Code   RO          257    .text.UARTvprintf   uartstdio.o
+    0x00000880   0x00000880   0x0000003e   Code   RO          251    .text.UARTwrite     uartstdio.o
+    0x000008be   0x000008be   0x00000002   PAD
+    0x000008c0   0x000008c0   0x0000002a   Code   RO           41    .text.etherClearReg  enc28j60.o
+    0x000008ea   0x000008ea   0x00000002   PAD
+    0x000008ec   0x000008ec   0x0000000e   Code   RO           33    .text.etherCsOff    enc28j60.o
+    0x000008fa   0x000008fa   0x00000002   PAD
+    0x000008fc   0x000008fc   0x00000016   Code   RO           31    .text.etherCsOn     enc28j60.o
+    0x00000912   0x00000912   0x00000002   PAD
+    0x00000914   0x00000914   0x00000094   Code   RO           65    .text.etherGetPacket  enc28j60.o
+    0x000009a8   0x000009a8   0x0000003c   Code   RO           93    .text.etherGetUdpData  enc28j60.o
+    0x000009e4   0x000009e4   0x00000140   Code   RO           61    .text.etherInit     enc28j60.o
+    0x00000b24   0x00000b24   0x0000006e   Code   RO           85    .text.etherIsArp    enc28j60.o
+    0x00000b92   0x00000b92   0x00000002   PAD
+    0x00000b94   0x00000b94   0x00000058   Code   RO           77    .text.etherIsIp     enc28j60.o
+    0x00000bec   0x00000bec   0x00000054   Code   RO           79    .text.etherIsIpUnicast  enc28j60.o
+    0x00000c40   0x00000c40   0x0000001a   Code   RO           67    .text.etherIsOverflow  enc28j60.o
+    0x00000c5a   0x00000c5a   0x00000002   PAD
+    0x00000c5c   0x00000c5c   0x0000004c   Code   RO           81    .text.etherIsPingReq  enc28j60.o
+    0x00000ca8   0x00000ca8   0x0000008c   Code   RO           91    .text.etherIsUdp    enc28j60.o
+    0x00000d34   0x00000d34   0x0000000e   Code   RO           63    .text.etherKbhit    enc28j60.o
+    0x00000d42   0x00000d42   0x00000002   PAD
+    0x00000d44   0x00000d44   0x000000b4   Code   RO           69    .text.etherPutPacket  enc28j60.o
+    0x00000df8   0x00000df8   0x0000000e   Code   RO           57    .text.etherReadMem  enc28j60.o
+    0x00000e06   0x00000e06   0x00000002   PAD
+    0x00000e08   0x00000e08   0x00000012   Code   RO           55    .text.etherReadMemStart  enc28j60.o
+    0x00000e1a   0x00000e1a   0x00000002   PAD
+    0x00000e1c   0x00000e1c   0x00000008   Code   RO           59    .text.etherReadMemStop  enc28j60.o
+    0x00000e24   0x00000e24   0x00000028   Code   RO           37    .text.etherReadReg  enc28j60.o
+    0x00000e4c   0x00000e4c   0x0000008a   Code   RO           87    .text.etherSendArpResp  enc28j60.o
+    0x00000ed6   0x00000ed6   0x00000002   PAD
+    0x00000ed8   0x00000ed8   0x000000b6   Code   RO           83    .text.etherSendPingResp  enc28j60.o
+    0x00000f8e   0x00000f8e   0x00000002   PAD
+    0x00000f90   0x00000f90   0x0000014c   Code   RO           97    .text.etherSendUdpData  enc28j60.o
+    0x000010dc   0x000010dc   0x00000016   Code   RO           43    .text.etherSetBank  enc28j60.o
+    0x000010f2   0x000010f2   0x00000002   PAD
+    0x000010f4   0x000010f4   0x0000001a   Code   RO          105    .text.etherSetIpAddress  enc28j60.o
+    0x0000110e   0x0000110e   0x00000002   PAD
+    0x00001110   0x00001110   0x0000002a   Code   RO           39    .text.etherSetReg   enc28j60.o
+    0x0000113a   0x0000113a   0x00000002   PAD
+    0x0000113c   0x0000113c   0x00000044   Code   RO           71    .text.etherSumWords  enc28j60.o
+    0x00001180   0x00001180   0x0000000c   Code   RO           51    .text.etherWriteMem  enc28j60.o
+    0x0000118c   0x0000118c   0x00000012   Code   RO           49    .text.etherWriteMemStart  enc28j60.o
+    0x0000119e   0x0000119e   0x00000002   PAD
+    0x000011a0   0x000011a0   0x00000008   Code   RO           53    .text.etherWriteMemStop  enc28j60.o
+    0x000011a8   0x000011a8   0x00000026   Code   RO           45    .text.etherWritePhy  enc28j60.o
+    0x000011ce   0x000011ce   0x00000002   PAD
+    0x000011d0   0x000011d0   0x0000002a   Code   RO           35    .text.etherWriteReg  enc28j60.o
+    0x000011fa   0x000011fa   0x00000002   PAD
+    0x000011fc   0x000011fc   0x0000002a   Code   RO           73    .text.getEtherChecksum  enc28j60.o
+    0x00001226   0x00001226   0x00000002   PAD
+    0x00001228   0x00001228   0x00000004   Code   RO           75    .text.htons         enc28j60.o
+    0x0000122c   0x0000122c   0x000000ca   Code   RO          127    .text.initHw        inithw.o
+    0x000012f6   0x000012f6   0x00000002   PAD
+    0x000012f8   0x000012f8   0x0000010c   Code   RO            6    .text.main          main.o
+    0x00001404   0x00001404   0x000000a0   Code   RO            4    .text.printPacket   main.o
+    0x000014a4   0x000014a4   0x0000000e   Code   RO           29    .text.spiRead       enc28j60.o
+    0x000014b2   0x000014b2   0x00000002   PAD
+    0x000014b4   0x000014b4   0x00000014   Code   RO           27    .text.spiWrite      enc28j60.o
+    0x000014c8   0x000014c8   0x00000018   Code   RO          135    .text.waitMicrosecond  wait.o
+    0x000014e0   0x000014e0   0x00000028   Code   RO          275    i.GPIODirModeSet    driverlib.lib(gpio.o)
+    0x00001508   0x00001508   0x00000138   Code   RO          287    i.GPIOPadConfigSet  driverlib.lib(gpio.o)
+    0x00001640   0x00001640   0x00000044   Code   RO          288    i.GPIOPinConfigure  driverlib.lib(gpio.o)
+    0x00001684   0x00001684   0x0000001c   Code   RO          311    i.GPIOPinTypeUART   driverlib.lib(gpio.o)
+    0x000016a0   0x000016a0   0x00000028   Code   RO          752    i.SysCtlPeripheralEnable  driverlib.lib(sysctl.o)
+    0x000016c8   0x000016c8   0x0000002c   Code   RO          755    i.SysCtlPeripheralPresent  driverlib.lib(sysctl.o)
+    0x000016f4   0x000016f4   0x0000001a   Code   RO         1173    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x0000170e   0x0000170e   0x00000002   PAD
+    0x00001710   0x00001710   0x00000228   Data   RO          319    .constdata          driverlib.lib(gpio.o)
+    0x00001938   0x00001938   0x00000020   Data   RO         1248    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00001958, Size: 0x00000008, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00001958   0x00000006   Data   RW          110    .data.macAddress    enc28j60.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000008, Load base: 0x00001960, Size: 0x00000188, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000008        -       0x00000060   Zero   RW         1115    .bss                c_w.l(libspace.o)
+    0x20000068        -       0x00000004   Zero   RW          117    .bss.arp            enc28j60.o
+    0x2000006c        -       0x00000004   Zero   RW          112    .bss.enc28j60       enc28j60.o
+    0x20000070        -       0x00000004   Zero   RW          113    .bss.ether          enc28j60.o
+    0x20000074        -       0x00000004   Zero   RW          261    .bss.g_ui32Base     uartstdio.o
+    0x20000078        -       0x00000004   Zero   RW          116    .bss.icmp           enc28j60.o
+    0x2000007c        -       0x00000004   Zero   RW          114    .bss.ip             enc28j60.o
+    0x20000080        -       0x00000004   Zero   RW          115    .bss.ipv4Address    enc28j60.o
+    0x20000084        -       0x00000001   Zero   RW          107    .bss.nextPacketLsb  enc28j60.o
+    0x20000085        -       0x00000001   Zero   RW          108    .bss.nextPacketMsb  enc28j60.o
+    0x20000086   0x00001960   0x00000002   PAD
+    0x20000088        -       0x00000004   Zero   RW          111    .bss.sum            enc28j60.o
+    0x2000008c        -       0x00000004   Zero   RW          118    .bss.udp            enc28j60.o
+    0x20000090        -       0x00000000   Zero   RW           17    HEAP                startup_rvmdk.o
+    0x20000090        -       0x00000100   Zero   RW           16    STACK               startup_rvmdk.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      2412          0          0          6         34      10949   enc28j60.o
+       202          0          0          0          0        539   inithw.o
+       520         96          0          0          0       1393   main.o
+       672        636          0          0        256        468   startup_rvmdk.o
+       136          0          0          0          0       9400   uart.o
+       886        224          0          0          4       4426   uartstdio.o
+        24          0          0          0          0        509   wait.o
+
+    ----------------------------------------------------------------------
+      4900        956         32          8        296      27684   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        48          0          0          2          2          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         6          0          0          0          0          0   __rtentry4.o
+        52          8          0          0          0          0   __scatter.o
+        26          0          0          0          0          0   __scatter_copy.o
+        28          0          0          0          0          0   __scatter_zi.o
+        16          0          0          0          0         68   aeabi_memset.o
+        18          0          0          0          0         80   exit.o
+         6          0          0          0          0        152   heapauxi.o
+         0          0          0          0          0          0   indicate_semi.o
+         2          0          0          0          0          0   libinit.o
+         6          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+        68          0          0          0          0         68   rt_memclr.o
+        78          0          0          0          0         80   rt_memclr_w.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         68   sys_exit.o
+        74          0          0          0          0         80   sys_stackheap_outer.o
+         2          0          0          0          0         68   use_no_semi.o
+       448          8        552          0          0       8061   gpio.o
+        84          8          0          0          0       1027   sysctl.o
+        26          0          0          0          0        116   fpinit.o
+
+    ----------------------------------------------------------------------
+      1004         32        552          0         96      10004   Library Totals
+         8          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       438         16          0          0         96        800   c_w.l
+       532         16        552          0          0       9088   driverlib.lib
+        26          0          0          0          0        116   fz_wm.l
+
+    ----------------------------------------------------------------------
+      1004         32        552          0         96      10004   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      5904        988        584          8        392      37096   Grand Totals
+      5904        988        584          8        392      37096   ELF Image Totals
+      5904        988        584          8          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 6488 (   6.34kB)
+    Total RW  Size (RW Data + ZI Data)               400 (   0.39kB)
+    Total ROM Size (Code + RO Data + RW Data)       6496 (   6.34kB)
+
+==============================================================================
+
